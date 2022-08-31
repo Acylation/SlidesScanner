@@ -1,0 +1,24 @@
+Qt-Visual Studio联合开发注意事项
+下载WinGDB，在QtCreator中完成MSVC Kit的配置
+下载VS2017、Qt加MSVC配置、加入Path、下载扩展
+配置拓展，指明一个Qt版本，确认bin/exe的地址
+
+QtCreator新建qmake项目，用VS2019-扩展-Qt VS Tools 打开.pro文件
+设置Windows SDK版本，Solution文件夹-属性-常规，自动配置一个10.0以外的版本
+
+——————————————————————
+Visual Studio 调用OpenCV的开发
+安装OpenCV for Windows 的版本
+项目-设置-VC++目录-includePath
+项目-设置-VC++目录-库目录
+项目-设置-连接器-输入-附加依赖项
+
+——————————————————————
+Qt OpenCV 联合开发
+右键项目-添加库-外部库，找到x64/vc15下面的world_opencv<version>.lib
+修改.pro 文件中的Include&Depend
+——————————————————————
+MinGW OpenCV配置
+MinGW、OpenCV源代码；CMake；
+
+
